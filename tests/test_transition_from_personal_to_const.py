@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.support.wait import WebDriverWait
 from locators import StellaLocators
 from data import Data
@@ -13,7 +15,7 @@ class TestTransitionFromPersonalToConst:
 
         constructor_link = driver.find_element(*StellaLocators.LINK_CONSTRUCTOR)
         constructor_link.click()
-        assert "https://stellarburgers.nomoreparties.site"
+        assert driver.current_url == Data.STELLAR_TRANSIT
 
     def test_transitional_to_const_logo(self,driver):
         TestStellarAuthtorisation.test_auth_button_account(self,driver)
@@ -26,4 +28,4 @@ class TestTransitionFromPersonalToConst:
 
         constructor_link = driver.find_element(*StellaLocators.LINK_CONSTRUCTOR)
         constructor_link.click()
-        assert "https://stellarburgers.nomoreparties.site"
+        assert driver.current_url == Data.STELLAR_TRANSIT

@@ -2,7 +2,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from locators import StellaLocators
 from selenium.webdriver.support import expected_conditions
 from test_auth import TestStellarAuthtorisation
-import time
+
 
 class TestExitAccont:
     def test_button_exit(self, driver):

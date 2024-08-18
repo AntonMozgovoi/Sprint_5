@@ -21,7 +21,10 @@ class StellaLocators:
     LINK_PERSONAL_ACCOUNT = (By.XPATH, "//p[text() = 'Личный Кабинет']") # Ссылка "Личный кабинет"
 
     LINK_CONSTRUCTOR = (By.XPATH, "//p[text() = 'Конструктор']") # Ссылка "Конструктор"
+
     LOGO = (By.XPATH, "//div[@class = 'AppHeader_header__logo__2D0X2']") # Логотип
+  #  LOGO = (By.XPATH, ".//div[contains(@class,'AppHeader_header')")  # Логотип
+
     EXIT_BUTTON = (By.XPATH, "//button[text() = 'Выход']") # Кнопка "Выход"
 
     SAUCE_ON_MENU = (By.XPATH, "//span[text() ='Соусы']") # Ссылка на соусы в меню

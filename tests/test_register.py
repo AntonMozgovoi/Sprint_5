@@ -1,3 +1,6 @@
+import time
+
+from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from locators import StellaLocators
 from data import Data
@@ -25,8 +28,9 @@ class TestStellarRegister:
 
         register_button = driver.find_element(*StellaLocators.BUTTON_REG)
         register_button.click()
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(StellaLocators.LOGIN_SUBMINT_BUTTON))
+        assert (driver.find_element(*StellaLocators.LOGIN_SUBMINT_BUTTON)).is_displayed()
 
-        assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
 
     def test_stellar_register_negative(self, driver):
         enter_button = driver.find_element(*StellaLocators.ENTER_ACCOUNT_BUTTON)

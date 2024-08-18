@@ -17,7 +17,7 @@ class TestStellarAuthtorisation:
 
             submint_button = driver.find_element(*StellaLocators.LOGIN_SUBMINT_BUTTON)
             submint_button.click()
-            assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
+            assert driver.current_url == Data.STELLAR_LOG
 
         def testAuthPersonal(self, driver):
             enter_button = driver.find_element(*StellaLocators.ENTER_ACCOUNT_BUTTON)
@@ -31,7 +31,7 @@ class TestStellarAuthtorisation:
 
             submint_button = driver.find_element(*StellaLocators.LOGIN_SUBMINT_BUTTON)
             submint_button.click()
-            assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
+            assert driver.current_url == Data.STELLAR_LOG
 
         def testAuthRegisterFormButton(self, driver):
 
@@ -52,7 +52,7 @@ class TestStellarAuthtorisation:
 
             submint_button = driver.find_element(*StellaLocators.LOGIN_SUBMINT_BUTTON)
             submint_button.click()
-            assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
+            assert driver.current_url == Data.STELLAR_LOG
         def testAuthRecoverPassword(self, driver):
             enter_button = driver.find_element(*StellaLocators.ENTER_ACCOUNT_BUTTON)
             enter_button.click()
@@ -77,7 +77,7 @@ class TestStellarAuthtorisation:
 
             submint_button = driver.find_element(*StellaLocators.LOGIN_SUBMINT_BUTTON)
             submint_button.click()
-            assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
+            assert driver.current_url == Data.STELLAR_LOG
 
 
 
